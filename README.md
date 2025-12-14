@@ -35,4 +35,4 @@ Run the following command to start a PostgreSQL container:
 docker run -d --name dev-postgres-projectmanager -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=ProjectManager -p 5432:5432 -v postgres-data:/var/lib/postgresql/data postgres:15
 ```
 ### 2. Project Running on local system
-- Dont have to run local system
+- The project have to run in local system, no docker image available for the codebase.
