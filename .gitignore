@@ -412,3 +412,6 @@ Desktop.ini
 *.docx
 !Documentation/**/*.pdf
 !Documentation/**/*.docx
+
+# Claude Code
+.claude/
