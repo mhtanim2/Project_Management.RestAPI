@@ -1,0 +1,57 @@
+@HostAddress = http://localhost:5165
+@ContentType = application/json
+
+### Get WeatherForecast (Health Check)
+GET {{HostAddress}}/weatherforecast/
+Accept: {{ContentType}}
+
+### Users: Get All
+GET {{HostAddress}}/api/Users
+Accept: {{ContentType}}
+
+### Users: Create User
+POST {{HostAddress}}/api/Users
+Content-Type: {{ContentType}}
+
+{
+  "fullName": "John Doe",
+  "email": "john.doe@example.com",
+  "role": 1
+}
+
+### Users: Get By Id
+GET {{HostAddress}}/api/Users/1
+Accept: {{ContentType}}
+
+### Teams: Get All
+GET {{HostAddress}}/api/Teams
+Accept: {{ContentType}}
+
+### Teams: Create Team
+POST {{HostAddress}}/api/Teams
+Content-Type: {{ContentType}}
+
+{
+  "name": "Alpha Squad",
+  "description": "Primary Development Team"
+}
+
+### WorkTasks: Create Task
+POST {{HostAddress}}/api/WorkTasks
+Content-Type: {{ContentType}}
+
+{
+  "title": "Fix Critical Bug",
+  "description": "Fix the login issue",
+  "status": 0,
+  "assignedToUserId": 1,
+  "teamId": 1
+}
+
+### WorkTasks: Get All
+GET {{HostAddress}}/api/WorkTasks
+Accept: {{ContentType}}
+
+### WorkTasks: Get By Id
+GET {{HostAddress}}/api/WorkTasks/1
+Accept: {{ContentType}}
